@@ -15,15 +15,17 @@ body{
 
 main{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    flex-direction: column; 
     width: 100%;
     height: 80vh;
+    gap: 18px;
 }
 
 nav{
     padding: 0 2rem;
-    height: 5rem;
+    height: 6rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -37,15 +39,59 @@ nav{
 }
 
 .nav-links li{
-    font-size: 1.2rem;
     list-style: none;
     cursor: pointer;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
 }
 
 .nav-links li:hover{
     text-decoration: underline;
 }
 
+.buttons{
+    display: flex;
+    gap: 10px;
+    margin-top: 1.8rem;
+}
+.para{
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    & span{
+        cursor: pointer;
+        color: blue;
+    }
+}
+
+
+.buttons button{
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    transition: all 0.5s linear;
+    cursor: pointer;
+    font-size: 1.5rem;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+}
+.buttons button:hover{
+    background-color: #f2f2f2;
+    transform: translateZ(1px);
+    -webkit-transform: translateZ(1px);
+    -moz-transform: translateZ(1px);
+    -ms-transform: translateZ(1px);
+    -o-transform: translateZ(1px);
+}
 .logo img{
     width: 30px;
     cursor: pointer;
@@ -61,15 +107,18 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
 }
 .search h1{
-    font-size: 10rem;
-    font-family: serif;
+    font-size: 8rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
     text-align: center;
 }
 
 .search h1 span:nth-child(1){
+    font-family: "Roberto", sans-serif;
+    font-weight: 400;
     color: rgb(91, 91, 246);
 }
 .search h1 span:nth-child(2){
@@ -102,7 +151,8 @@ nav{
 .fa-magnifying-glass{
     position: absolute;
     font-size: 16px;
-    top: 12px;
+    color: grey;
+    top: 16px;
     left: 14px;
 }
 
@@ -110,15 +160,15 @@ nav{
     position: absolute;
     font-size: 16px;
     /* right: -150px; */
-    right: 18px;
-    top: 10px;
+    right: 25px;
+    top: 16px;
     
 }
 
 .searchBar input{
-    border: 0.5px solid black;
+    border: 0.5px solid gray;
     width: 50vw;
-    height: 40px;
+    height: 50px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -129,6 +179,42 @@ nav{
 
 .searchBar input::placeholder{
     font-size: 1.4rem;
+
+}
+
+.searchBar input:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 100px;
+}
+
+.inner-footer {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.inner-footer div{
+    display: flex;
+    font-size: 1.3rem;
+    padding: 7px;
+}
+footer p{
+    font-size: 1.6rem;
+    padding: 0 10px;
+    margin-bottom: 1.5rem;
+}
+
+footer p:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 @media (width<830px) {
 
